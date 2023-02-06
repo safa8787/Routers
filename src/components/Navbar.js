@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = ({text , SetText}) => {
     return (
         <div className='Navigation'>
-          <img src='Th.png' alt="msg"/>
+          <img src='Th.jpg' alt="msg"/>
          <Link to={'/'}> <h3>Home</h3></Link>
        <Link to ={'/movie'}><h3>Movie</h3></Link>
        

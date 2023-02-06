@@ -78,7 +78,23 @@ width: 400px;
 }
 
 
+.about{
+color: brown;
+margin: 0 auto;
+
+}
+.series{
+  color: brown;
+  margin: 0 auto;
+  
+  }
+.home{
+background-image:url("../public/home.webp") ;
+width: 100vw;
+height: 200px;
+}
 .footer {
+  
   background-color: rgb(71, 68, 68);
   width: 100vw;
   height: 200px;
