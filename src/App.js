@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
-
+import MovieList from './views/MovieList';
+import Navbar from './components/Navbar';
+import { useState } from 'react';
+import Footer from './components/Footer';
+import  {Routes,Route} from 'react-router-dom';
+import About from './views/About';
+import Series from './views/Series';
+import Home from './views/Home';
+import Carte from './components/Carte';
 function App() {
+  const [text, SetText] = useState('');
+  console.log("text",text)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar SetText={SetText}/>
+    {/* <MovieList text={text}/> */}
+    <Routes>
+    <Route path='/' element={<Home/>}></Route>
+      <Route path='/movie' element={<MovieList text={text}/>}      />
+      
+      <Route path='/movie/details' element={<Carte/>}      />
+      <Route path='/about' element={<About/>}/>
+      <Route path='series' element={<Series/>}      />
+      <Route path='*' element={<h1>Not Found</h1>}      />
+    </Routes>
+
+      <Footer/>
+     
     </div>
   );
 }
